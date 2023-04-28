@@ -50,8 +50,14 @@ const Detail = ({ exerciseDetail }) => {
                 }}
             >
                 <Typography
-                    variant="h4"
+                    
                     textTransform='capitalize'
+                    sx={{
+                        fontSize: {
+                            lg: '40px', 
+                            xs: '30px'
+                        }
+                    }}
                 >
                     {name}
                 </Typography>
@@ -83,8 +89,14 @@ const Detail = ({ exerciseDetail }) => {
                             />
                         </Button>
                         <Typography
-                            variant="h5"
                             textTransform='capitalize'
+                            sx={{
+                                fontSize: {
+                                    lg: '25px',
+                                    xs: '20px'
+                                },
+                                fontWeight: '550'
+                            }}
                         >                    
                             {item.name}
                         </Typography>

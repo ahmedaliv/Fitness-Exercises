@@ -42,6 +42,13 @@ const paginate = (e,v) => {
       <Typography
         variant='h3'
         mb='46px'
+        textAlign='center'
+        sx={{
+          fontSize: {
+            lg: '40px',
+            xs: '30px'
+          },
+        }}
       >
         Showing Results
       </Typography>

@@ -12,8 +12,13 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
     }}
     >
       <Typography
-        variant='h4'
-        mb={5}
+  sx={{
+    fontSize: {
+      lg: '38px',
+      xs: '30px'
+  },
+    textAlign:'center'
+}}        mb={5}
       >
         Exercises that target the same muscle group
       </Typography>
@@ -26,7 +31,14 @@ const SimilarExercises = ({ targetMuscleExercises, equipmentExercises }) => {
       </Stack>
       
       <Typography
-        variant='h4'
+          sx={{
+            fontSize: {
+              lg: '40px',
+              xs: '30px'
+          },
+            textAlign:'center'
+        }}
+        
         mb={5}
       >
         Exercises that use the same equipment

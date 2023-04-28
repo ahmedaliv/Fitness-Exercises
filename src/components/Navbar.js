@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { Link,useLocation } from 'react-router-dom'
-import { Stack } from '@mui/material'
+import { Stack,Typography } from '@mui/material'
 import Logo from '../assets/images/Logo.png'
 
 const Navbar = () => {
@@ -48,13 +48,36 @@ const Navbar = () => {
                       borderBottom: '3px solid #FF2625',
                       scrollBehavior: 'smooth'
               }}
-              >Home</Link>
+              >
+                  
+                  <Typography
+                      sx={{
+                          fontSize: {
+                              lg: '24px',
+                                xs: '20px'
+                          },
+                  }}
+                  >
+                  Home
+                  </Typography>
+              </Link>
               
               <a href={exercisesId} style={{
                   textDecoration: 'none',
                   color: '#3A1212',
               }}
-              >Excercise</a>
+              >
+                  <Typography
+                      sx={{
+                          fontSize: {
+                              lg: '24px',
+                                xs: '20px'
+                          },
+                  }}
+                  >
+                  Excercise
+                  </Typography>
+              </a>
           </Stack>
       </Stack>
   )

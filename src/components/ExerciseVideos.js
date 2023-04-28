@@ -16,9 +16,15 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
       p='20px'
     >
       <Typography
-        variant="h4"
+        sx={{
+          fontSize: {
+            lg: '40px',
+            xs: '30px'
+          },
+          textAlign:'center'
+        }}
       >
-        Watch <span style={{color:'#ff2625' , textTranform:'capitalize'}}>{name}</span> Exercise Videos
+        Watch <span style={{color:'#ff2625' , textTranform:'capitalize',fontWeight:'bold'}}>{name}</span> Exercise Videos
       </Typography>
       <Stack 
         sx={{
