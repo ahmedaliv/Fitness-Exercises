@@ -1,12 +1,16 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useState,useEffect} from 'react'
+import { Link,useLocation } from 'react-router-dom'
 import { Stack } from '@mui/material'
 import Logo from '../assets/images/Logo.png'
 
-function scrollToSection() {
-    document.querySelector("#exercises").scrollIntoView({ behavior: "smooth" });
-  }
 const Navbar = () => {
+    const location = useLocation();
+    const [exercisesId, setExercisesId] = useState('#exercises')
+    useEffect(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+        const currentPage= window.location.pathname;
+        currentPage.includes('exercise') ? setExercisesId("#video-exercises") : setExercisesId("#exercises");
+      }, [location.pathname])    
   return (
       <Stack
           direction="row"
@@ -46,11 +50,10 @@ const Navbar = () => {
               }}
               >Home</Link>
               
-              <a href='#exercises' style={{
+              <a href={exercisesId} style={{
                   textDecoration: 'none',
                   color: '#3A1212',
               }}
-              onClick={scrollToSection}
               >Excercise</a>
           </Stack>
       </Stack>

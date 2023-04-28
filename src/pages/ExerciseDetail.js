@@ -1,6 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { useParams } from 'react-router-dom'
 import { Box } from '@mui/material'
+import { Helmet } from 'react-helmet'
 import { exerciseOptions,youtubeOptions, fetchData } from '../utils/fetchData'
 import Detail from '../components/Detail'
 import ExerciseVideos from '../components/ExerciseVideos'
@@ -35,8 +36,12 @@ const ExerciseDetail = () => {
       }
     fetchExerciseDetail();
   }, [id]);
+  
   return (
-    
+    <>
+     <Helmet>
+  <title>{`Exercise ${exerciseDetail && exerciseDetail.name ? exerciseDetail.name : ''}`}</title>
+</Helmet>
     <Box>
       <Detail
       exerciseDetail={exerciseDetail}
@@ -50,6 +55,7 @@ const ExerciseDetail = () => {
         equipmentExercises={equipmentExercises}
       />
     </Box>
+    </>
   )
 }
 

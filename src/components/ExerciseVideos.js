@@ -33,6 +33,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         }}
         justifyContent='flex-start'
         alignItems='center'
+        id='video-exercises'
       >
         {exerciseVideos.length ? exerciseVideos.slice(0, 3).map((item, index) => (
           <a
