@@ -31,7 +31,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
           },
           flexWrap:'wrap',
         }}
-        justifyContent='flex-start'
+        justifyContent='space-around'
         alignItems='center'
         id='video-exercises'
       >
@@ -57,15 +57,18 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
               vairant="h5"
               color='#000'
             >
-              {item.video.title}
+             
+  {item.video.title.substring(0, 35)} {/* limit to 20 characters */}
+  {item.video.title.length > 35 ? "..." : ""} {/* add ellipsis if the text is longer than 20 characters */}
             </Typography>
             <Typography
-              m='10px 0'
-              vairant="h6"
-              color='#1199'
-            >
-              {item.video.channelName}
-            </Typography>
+  m='10px 0'
+  vairant="h6"
+  color='#1199'
+>
+  {item.video.channelName.substring(0, 30)} {/* limit to 20 characters */}
+  {item.video.channelName.length > 30 ? "..." : ""} {/* add ellipsis if the text is longer than 20 characters */}
+</Typography>
           </a>
         )) : <Loader />}
       </Stack>
