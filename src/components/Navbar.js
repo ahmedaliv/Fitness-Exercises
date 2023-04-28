@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Stack } from '@mui/material'
 import Logo from '../assets/images/Logo.png'
+
+function scrollToSection() {
+    document.querySelector("#exercises").scrollIntoView({ behavior: "smooth" });
+  }
 const Navbar = () => {
   return (
       <Stack
@@ -37,13 +41,17 @@ const Navbar = () => {
                   style={{
                       textDecoration: 'none',
                       color: '#3A1212',
-                      borderBottom:'3px solid #FF2625'
+                      borderBottom: '3px solid #FF2625',
+                      scrollBehavior: 'smooth'
               }}
               >Home</Link>
+              
               <a href='#exercises' style={{
                   textDecoration: 'none',
-                    color: '#3A1212',
-              }}>Excercise</a>
+                  color: '#3A1212',
+              }}
+              onClick={scrollToSection}
+              >Excercise</a>
           </Stack>
       </Stack>
   )

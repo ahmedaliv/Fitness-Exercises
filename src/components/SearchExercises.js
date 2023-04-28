@@ -24,8 +24,8 @@ const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
         exercise.equipment.toLowerCase().includes(search) ||
         exercise.bodyPart.toLowerCase().includes(search)
       ));
-      setSearch('');
       setExercises(searchExercises);
+      setSearch('');
     }
   }
   return (
@@ -98,7 +98,7 @@ const SearchExercises = ({setExercises,bodyPart,setBodyPart}) => {
           px:'20px'
       }}
       >
- <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} />
+ <HorizontalScrollbar data={bodyParts} bodyParts setBodyPart={setBodyPart} bodyPart={bodyPart} isBodyParts />
 
       </Box>
     </Stack>

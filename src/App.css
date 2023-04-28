@@ -98,12 +98,18 @@ body {
   }
   
   .exercise-video {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    width: 387px;
-    height: 381px;
-    text-decoration: none;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* gap: 20 px; */
+    /* width: 387px; */
+    /* height: 381px; */
+    /* text-decoration: none; */
+    /* object-fit:contain; */
+    transition: 0.3s all ease-in-out;
+    object-fit:'contain'
+  }
+  .exercise-video:hover{
+    transform: scale(1.1, 1.1);
   }
   
   @media screen and (max-width:1200px) {
@@ -131,8 +137,8 @@ body {
     }
   
     .exercise-video {
-      width: 320px;
-      height: 300px;
+      width: 300px;
+      height: 270px;
     }
   
   }
