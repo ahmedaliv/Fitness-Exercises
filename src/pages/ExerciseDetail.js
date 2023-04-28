@@ -38,10 +38,7 @@ const ExerciseDetail = () => {
   }, [id]);
   
   return (
-    <>
-     <Helmet>
-  <title>{`Exercise ${exerciseDetail && exerciseDetail.name ? exerciseDetail.name : ''}`}</title>
-</Helmet>
+
     <Box>
       <Detail
       exerciseDetail={exerciseDetail}
@@ -55,7 +52,6 @@ const ExerciseDetail = () => {
         equipmentExercises={equipmentExercises}
       />
     </Box>
-    </>
   )
 }
 
